@@ -46,7 +46,7 @@ exports.createPDF = (data_rcvd)=>{
                     "height": "20mm",
                 },
             };
-            pdf.create(htmlStr, options).toFile(path.join(__dirname,'../assets/pdfs',`/receipt-${data_rcvd.payment}.pdf`), function (err, data) {
+            pdf.create(htmlStr, options).toFile(path.join(__dirname,'../assets',`/receipt-${data_rcvd.payment}.pdf`), function (err, data) {
                 if (err) {
                     console.log(err);
                 } else {

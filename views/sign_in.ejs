@@ -1,0 +1,15 @@
+<form action="/user/create-session" method="post">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" class="form-control">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" id="password" class="form-control" aria-labelledby="passwordHelpBlock">
+    <div id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <a href="/user/sign-up">Want to Register?</a>
+    &nbsp; &nbsp;
+    <a href="/user/auth/google">Login/SignUp With Google</a>
+    &nbsp; &nbsp;
+    <a href="/user/forgot-password">Forgot Password</a>
+</form>

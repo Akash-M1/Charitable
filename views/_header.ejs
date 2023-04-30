@@ -1,0 +1,15 @@
+<% if (locals.user && !locals.user.verified) { %>
+    <p style="color: red;">Please verify you email by going to your email</p>
+<% } %>
+
+<h1 style="display: inline;"><a href="/" style="text-decoration: none;">Charitable</a></h1>
+
+<% if (locals.user) { %>
+    <a href="/user/profile/<%= locals.user._id %>" class="btn btn-primary" style="float: right;"><%= locals.user.name %></a>
+    <a href="/user/logout" class="btn btn-danger" style="float: right;">Sign out</a>
+<% } else if(locals.signinsignup) { %>
+    
+<% }else{ %>
+    <a href="/user/sign-in" class="btn btn-danger" style="float: right;">Sign In</a>
+    <a href="/user/sign-up" class="btn btn-danger" style="float: right;">Sign Up</a>
+<% } %>

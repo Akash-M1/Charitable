@@ -19,7 +19,7 @@ const flashMiddleware = require('./middlewares/flashMiddelWare');
 
 
 const app = express()
-const PORT=8000
+const PORT=process.env.PORT | 8000
 
 const store = new MongoDBStore({
     uri:process.env.Mongoose_URL,

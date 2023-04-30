@@ -6,7 +6,7 @@ const crypto = require('crypto');
 passport.use(new GoogleStategy({
         clientID:process.env.Google_Client_ID,
         clientSecret:process.env.Google_Client_Secret,
-        callbackURL:"http://localhost:8000/user/auth/google/callback",
+        callbackURL:"https://charitable.onrender.com/user/auth/google/callback",
     },
     async function(accessToken, refreshToken,profile, done){
         try{

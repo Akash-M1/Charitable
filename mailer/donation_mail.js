@@ -13,7 +13,7 @@ const createReceipt = (data)=>{
         html:htmlStr,
         attachments: [{
             filename: `receipt-${data.payment}.pdf`,
-            path: path.join(__dirname,'../assets/pdfs',`/receipt-${data.payment}.pdf`),
+            path: path.join(__dirname,'../assets',`/receipt-${data.payment}.pdf`),
             contentType: 'application/pdf'
         }],
     },function(err,info){
@@ -22,7 +22,7 @@ const createReceipt = (data)=>{
             return;
         }
         if(info){
-            fs.unlink(path.join(__dirname,'../assets/pdfs',`/receipt-${data.payment}.pdf`),function(err){
+            fs.unlink(path.join(__dirname,'../assets',`/receipt-${data.payment}.pdf`),function(err){
                 if(err){
                     console.log(err);
                 }
